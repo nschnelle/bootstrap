@@ -29,7 +29,7 @@ describe('rating directive', function () {
 
   function triggerKeyDown(keyCode) {
     var e = $.Event('keydown');
-    e.which = keyCode;
+    e.keyCode = keyCode;
     element.trigger(e);
   }
 

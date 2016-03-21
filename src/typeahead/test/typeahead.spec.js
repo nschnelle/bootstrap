@@ -58,7 +58,7 @@ describe('typeahead tests', function () {
   var triggerKeyDown = function (element, keyCode) {
     var inputEl = findInput(element);
     var e = $.Event('keydown');
-    e.which = keyCode;
+    e.keyCode = keyCode;
     inputEl.trigger(e);
   };
 

@@ -97,7 +97,7 @@ describe('datepicker directive', function () {
       'esc': 27
     };
     var e = $.Event('keydown');
-    e.which = keyCodes[key];
+    e.keyCode = keyCodes[key];
     if (ctrl) {
       e.ctrlKey = true;
     }

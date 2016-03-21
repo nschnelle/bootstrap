@@ -16,7 +16,7 @@ describe('dropdownToggle', function() {
 
   var triggerKeyDown = function (element, keyCode) {
     var e = $.Event('keydown');
-    e.which = keyCode;
+    e.keyCode = keyCode;
     element.trigger(e);
   };
 
