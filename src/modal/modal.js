@@ -221,7 +221,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
       $document.bind('keydown', function (evt) {
         var modal;
 
-        if (evt.which === 27) {
+        if (evt.keyCode === 27) {
           modal = openedWindows.top();
           if (modal && modal.value.keyboard) {
             evt.preventDefault();

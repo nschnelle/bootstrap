@@ -152,7 +152,7 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
   $scope.$on('datepicker.focus', focusElement);
 
   $scope.keydown = function( evt ) {
-    var key = $scope.keys[evt.which];
+    var key = $scope.keys[evt.keyCode];
 
     if ( !key || evt.shiftKey || evt.altKey ) {
       return;
@@ -565,11 +565,11 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
       element.bind('keydown', keydown);
 
       scope.keydown = function(evt) {
-        if (evt.which === 27) {
+        if (evt.keyCode === 27) {
           evt.preventDefault();
           evt.stopPropagation();
           scope.close();
-        } else if (evt.which === 40 && !scope.isOpen) {
+        } else if (evt.keyCode === 40 && !scope.isOpen) {
           scope.isOpen = true;
         }
       };

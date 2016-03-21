@@ -48,10 +48,10 @@ angular.module('ui.bootstrap.rating', [])
   };
 
   $scope.onKeydown = function(evt) {
-    if (/(37|38|39|40)/.test(evt.which)) {
+    if (/(37|38|39|40)/.test(evt.keyCode)) {
       evt.preventDefault();
       evt.stopPropagation();
-      $scope.rate( $scope.value + (evt.which === 38 || evt.which === 39 ? 1 : -1) );
+      $scope.rate( $scope.value + (evt.keyCode === 38 || evt.keyCode === 39 ? 1 : -1) );
     }
   };
 

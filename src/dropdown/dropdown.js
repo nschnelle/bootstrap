@@ -44,7 +44,7 @@ angular.module('ui.bootstrap.dropdown', [])
   };
 
   var escapeKeyBind = function( evt ) {
-    if ( evt.which === 27 ) {
+    if ( evt.keyCode === 27 ) {
       openScope.focusToggleElement();
       closeDropdown();
     }
